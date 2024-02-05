@@ -11,7 +11,7 @@ const LLM = () => {
       const response = await fetch("https://api.ai21.com/studio/v1/answer", {
         method: "POST",
         headers: {
-          "Authorization": "Bearer fcWxuYwJnUTIzmU7THqgFw6FtFKytUeI",
+          "Authorization": `Bearer ${process.env.REACT_APP_API_KEY}`,
           "Content-Type": "application/json",
         },
         body: JSON.stringify(
